@@ -1,3 +1,3 @@
-Rishi Munagala
+# **Rishi Munagala**
 
-Panda
+## Favorite Animal is Panda
