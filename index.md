@@ -6,7 +6,7 @@
 
 **Installing VScode:**
 
-The first step was to install the ide Visual Studio Code. I had to basically go to https://code.visualstudio.com/ and follow the instructions to install and make sure that when I open it, it looks like the screenshot below.
+The first step was to install the ide Visual Studio Code. I had to basically go to [https://code.visualstudio.com/](https://code.visualstudio.com/) and follow the instructions to install and make sure that when I open it, it looks like the screenshot below.
 
 ![Image](vscode.png)
 
