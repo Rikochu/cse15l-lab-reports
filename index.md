@@ -20,7 +20,7 @@ The next step was to remotely connect to the server. I would open the terminal o
 
 **Trying Some Commands:**
 
-Next was to try out some commands once on the server. Two of the commands are shown in the screenshot above. Ls -a lists all the files and hidden directories within the current directory. Ls -lat lists all the files in the current directory but shows more detailed info regarding who has access, size, and date modified of each file. Another set of commands to try is “cd” which changes the current directory of the command line to whatever follows.
+Next was to try out some commands once on the server. Two of the commands are shown in the screenshot below. Ls -a lists all the files and hidden directories within the current directory. Ls -lat lists all the files in the current directory but shows more detailed info regarding who has access, size, and date modified of each file. Another set of commands to try is “cd” which changes the current directory of the command line to whatever follows.
 
 ![Image](lat.JPG)
 
@@ -38,7 +38,7 @@ For setting an ssh key, the first step was to type the command “ssh-keygen” 
 
 ![Image](sshkeys1.JPG)
 
-One key step to solving an issue I had was opening PowerShell as admin to do these steps and to start the ssh-agent by typing the first three commands as shown in the first screenshot above. Then I use the command ssh-add and the location of where the save key was stored.
+One key step to solving an issue I had was opening PowerShell as admin to do these steps and to start the ssh-agent by typing the first three commands as shown in the first screenshot below. Then I use the command ssh-add and the location of where the save key was stored.
 
 ![Image](sshkeys2.JPG)
 
