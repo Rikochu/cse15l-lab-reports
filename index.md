@@ -1,5 +1,7 @@
 # **CSE 15L Lab Reports**
 
+## Rishi Munagala
+
 ## Week 2:
 
 **Installing VScode:**
