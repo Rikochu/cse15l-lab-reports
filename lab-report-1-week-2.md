@@ -53,13 +53,16 @@ Once finished, I was able to log in to the remote server without entering a pass
 
 **Optimizing Remote Running:**
 
-The last step was to make remote running more pleasant. One was to use the usual ssh command followed by your course-specific account, but adding commands such as `ls` or `javac` and `java` commands can run those commands on the servers and then log out immediately back to your client. This makes it so you can do the steps of logging in to the server, typing the command, and then logging out all in one command.
+The last step was to make remote running more pleasant. One was to use the usual ssh command followed by your course-specific account, but adding commands such as `scp` or `javac` and `java` commands can run those commands on the servers and then log out immediately back to your client. This makes it so you can do the steps of logging in to the server, typing the command, and then logging out all in one command.
 
-![Image](were.JPG)
+In the screenshot below, using `javac` and `java` we can see the file `WhereAmI.java` running on the client.
+![Image](whereclient.JPG)
 
+If we then add an edit to the code like in the last line of code on the file on the client, we can copy and run these changes on the server. In the last command of the second screenshot below, using the command `scp WhereAmI.java cs15lwi22agu@ieng6.ucsd.edu:~/; ssh cs15lwi22agu@ieng6.ucsdlwi22agu@ieng6.ucsd.edu "javac WhereAmI.java; java WhereAmI"` allows us to first copy the file, then login to the remote server, run the `javac` and `java` commnands, and immediately logout.
 
+![Image](edit.JPG)
 
+![Image](whereserver.JPG)
 
-
-
+This helps save time and keystrokes since the screenshot above shows that editing a file and copying it can be a process of trial and error. The screenshot shows the command running three times where the last attempt works how we wanted it to. Typing the command itself is 138 keystrokes. Not only does this save time and keystrokes in copying and running on the server temporarily, but by using the up arrow, it allows the user to call the previous command without retyping it.
 
