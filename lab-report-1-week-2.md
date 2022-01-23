@@ -13,7 +13,7 @@ The first step was to install the ide Visual Studio Code. I had to basically go 
 
 **Remotely Connecting:**
 
-The next step was to remotely connect to the server. I would open the terminal on VsCode and use the command “ssh” meaning secure shell and then my course-specific account which was “cs15lwi22agu@ieng6.ucsd.edu.” So I would type: 
+The next step was to remotely connect to the server. I would open the terminal on VsCode and use the command `ssh` meaning secure shell and then my course-specific account which was “cs15lwi22agu@ieng6.ucsd.edu.” So I would type: 
 `ssh cs15lwi22agu@ieng6.ucsd.edu` into the terminal and enter the password once it prompts me.
 
 ![Image](terminal.JPG)
