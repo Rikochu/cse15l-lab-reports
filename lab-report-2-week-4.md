@@ -46,7 +46,7 @@
 
   Code Change:
   
-  ![Image](loopfixcode.JPG)
+  ![Image](nolinks.JPG)
   
   Here the *failure-inducing input* was the file with no links and just text. The *symptom* in this case is the error `java.lang.StringIndexOutOfBoundsException` from the output that is due to the -1 returned from `indexOf()` not finding links. Using the same fix for the file with words after the link will fix the bug in the code. It will make sure to break if the local variables in the method are equal to -1. In this case, fixing this one bug in the code allowed the program to work with two different inputs that would result in different *symptoms.*
 
