@@ -6,6 +6,7 @@
 
 ## Streamline `ssh` Configuration:
 
+
 **Editing/Creating Config File:**
 
    The first step is to open the `.ssh` folder in an editor like Visual Studio Code. If there is no file named `config` then create a new one.
