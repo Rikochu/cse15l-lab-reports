@@ -2,12 +2,9 @@
 
 ## Rishi Munagala
 
-## Week 6:
+## Week 8:
 
-## Streamline `ssh` Configuration:
-
-
-**Editing/Creating Config File:**
+**[My MarkdownParse](https://github.com/Rikochu/markdown-parse)**
 
    The first step is to open the `.ssh` folder in an editor like Visual Studio Code. If there is no file named `config` then create a new one.
    Add the text as shown by the screenshot below. The `remote` in this case is the name you would `ssh` with. Make sure to also use your specified username for User.
@@ -16,7 +13,7 @@
 
  ***
 
- **`ssh` Login With Alias:**
+ **[Reviewed MarkdownParse](https://github.com/kathyychenn/markdown-parse)**
    
    Then by typing `ssh` and the chosen alias which in the case of the screenshot below is `remote`. You can login to the server typing less.
    
