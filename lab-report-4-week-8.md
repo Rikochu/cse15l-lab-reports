@@ -20,12 +20,15 @@ Used CommonMark demo site to see what should be produced:
   Code of Tests in MarkdownParse.java:
   
   **Snippet 1)**
+  
   ![Image](snipcode1.JPG)
   
   **Snippet 2)**
+  
   ![Image](snipcode2.JPG)
   
   **Snippet 3)**
+  
   ![Image](snipcode3.JPG)
   
 ***
