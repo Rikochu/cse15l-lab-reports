@@ -4,7 +4,7 @@
 
 ## Week 8:
 
-Used CommonMark demo site to see what should be produced: 
+**Used CommonMark demo site to see what should be produced:** 
   
   **Snippet 1)**
   ![Image](snip1.JPG)
@@ -17,7 +17,7 @@ Used CommonMark demo site to see what should be produced:
 
 ***
 
-  Code of Tests in MarkdownParse.java:
+  **Code of Tests in MarkdownParse.java:**
   
   **Snippet 1)**
   
