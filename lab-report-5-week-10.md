@@ -1,71 +1,43 @@
-# **CSE 15L Lab Report 4**
+# **CSE 15L Lab Report 5**
 
 ## Rishi Munagala
 
-## Week 8:
+## Week 10:
 
-**Used CommonMark demo site to see what should be produced:** 
+**How to find different results:** 
   
-  **Snippet 1)**
-  ![Image](snip1.JPG)
-  
-  **Snippet 2)**
-  ![Image](snip2.JPG)
-  
-  **Snippet 3)**
-  ![Image](snip3.JPG)
+In order to find the different results between my markdownparse and the provided implementation, using the command `diff` on the `.txt` files that had the outputs of all files listed would work. To create the file with the list of outputs, creating a bash file that runs a for loop on each file and prints the output is needed. Then using the command `bash (name of script file).sh > (name of txt file).txt` allows the output of each file to be saved on each line of the file.
 
 ***
 
-  **Code of Tests in MarkdownParse.java:**
+**Test 530.md:**
   
-  **Snippet 1)**
+  `[![moon](moon.jpg)][ref]`
   
-  ![Image](snipcode1.JPG)
+  **Output:**
+ 
+  ![Image](530diff.JPG)
   
-  **Snippet 2)**
+  For this case, I think that my implementation is correct. The difference here by the image above is that my implementation returns an empty list while the given implementation returns a list including `moon.jpg` which is an image link. An image link is different than a link that `MardownParse.java` should return so this input should return an empty list.
   
-  ![Image](snipcode2.JPG)
+  To fix this, would be be have an `if` statement that checks for image links specifically. The image below shows the code from my implementation where it considers if an `!` is before the open bracket and continues without return that link. The given implementation should use a similar check.
   
-  **Snippet 3)**
+  ![Image](fix2.JPG)
+ 
+***
+ 
+ **Test 519.md:**
   
-  ![Image](snipcode3.JPG)
+  `![[[foo](uri1)](uri2)](uri3)`
   
+  **Output:**
+ 
+  ![Image](519diff.JPG)
+  
+  In this case, I think that the given implementation is correct. This can be confirmed by the commonmark demo screenshot below. Common mark agrees that this imagine link should not result as a link that the programs returns so the output should be an empty list as shown by my implementation. 
+  
+  The given implementation instead considers an imbedded link. To fix this, there needs to be a check on whether there is  
+   
 ***
 
-**[My MarkdownParse](https://github.com/Rikochu/markdown-parse)**
-   
-  Output of my MarkdownParse:
-  ![Image](mine.JPG)
-   
-  **Snippet 1)**
-  
-  I think it would need to be a small change fix. Checking if the character at the index before the open bracket is a backtick can avoid including the false links. Also to fix the issue where the bracket inside the bracket causes the link not to be included can be fixed by checking if the next closed bracket is before the next open bracket or if there is no next open bracket. This would then allow the code to use the second open bracket rather than the one that should be considered part of the text. 
-  
-  **Snippet 2)**
-  
-  This fix could  be a bit longer of a fix than 10 lines. The issue from the output is if the first open bracket is at index 0, then `charAt(0-1)` would result in a negative index throwing the exception. So to fix this, is to add another check in the `if` statement to make sure `nextOpenBracket` is not equal to 0. To check if there is a link inside of brackets, would be to check if there is an another open bracket before the next closed bracket and then using recursion to recall the function from that bracket to see if there is a link can include the embedded link like the first example.
-  
-  **Snippet 3)**
-  
-  This should be a small change as well. The first issue is the exception that is resolved with solution for snippet 2. To make sure that the links that have line breaks are not counted would be to use an `if` statement to check that there is not two `\n` next to each other. This way, like the snippet 3 expected output from commonmark shows, the links that only have one `\n` can avoid the line break links.
 
-
- ***
-
- **[Reviewed MarkdownParse](https://github.com/kathyychenn/markdown-parse)**
-   
-  Output of Reviewed MarkdownParse:
-  ![Image](katy.JPG))
-  
-   **Snippet 1)**
-  
-  I think it would need to be a small change fix. To first fix the issue with the exception from the output, rather than checking if `nextOpenBracket != 0`, it would be better to check if `nextOpenBracket <= 0` so it disregard the case where `nextOpenBracket` is -1 which would make -1-1 = -2, thus throwing the exception for `charAt()`. Similar to my markdownParse, the next issue of backticks can be fixed by checking if the character at the index before the open bracket is a backtick. Also to fix the issue where the bracket inside the bracket causes the link not to be included can be fixed by checking if the next closed bracket is before the next open bracket or if there is no next open bracket. This would then allow the code to use the second open bracket rather than the one that should be considered part of the text. 
-  
-  **Snippet 2)**
-  
-  There could need be a bit longer of a fix. The first issue with the output can be fixed with the solution from snippet 1. Like my markdownParse, to check if there is a link inside of brackets, would be to check if there is an another open bracket before the next closed bracket. Then we can use a recursive call to function from that bracket to see if there is a link can include the embedded link like the first example.
-  
-  **Snippet 3)**
-  
-  This should be a small change as well. The first issue with the output can be fixed with the solution from snippet 1. Similar to the fix for my markdownParse, to make sure that the links that have line breaks are not counted would be to use an `if` statement to check that there is not two `\n` next to each other. This way, like the snippet 3 expected output from commonmark shows, the links that only have one `\n` can avoid the line break links.
