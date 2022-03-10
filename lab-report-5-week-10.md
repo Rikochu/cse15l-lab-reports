@@ -34,14 +34,10 @@ In order to find the different results between my markdownparse and the provided
  
   ![Image](519diff.JPG)
   
-  In this case, I think that my implementation shows the correct output but does not cover the issue. The correct output can be confirmed by the commonmark demo screenshot below. Common mark shows that this input should not be considered a link due to the `<` inside the brackets. Even though my implementation shows the right output, my code does not consider this case.
+  In this case, I think that my implementation shows the correct output but does not cover the issue. The correct output can be confirmed by the commonmark demo screenshot below. Common mark shows that `baz` not be considered a link due to the `<` inside the brackets. Even though my implementation shows the right output, my code does not consider this case.
   
   ![Image](correctput.JPG)
   
   The given implementation does not consider if there is a less than carrot. To fix this, there needs to be a check on whether there is a less than carrot and if that index is in between the open and closed brackets. If it is, similar to with image links, it should continue without adding that link. Below is the screenshot of the code changes to consider the case on my implementation. Creating a similar check will fix the issue on the given implementation.
    
    ![Image](fix3.JPG)
-
-***
-
-
