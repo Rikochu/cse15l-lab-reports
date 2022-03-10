@@ -26,18 +26,22 @@ In order to find the different results between my markdownparse and the provided
  
 ***
  
- **Test 519.md:**
+ **Test 523.md:**
   
-  `![[[foo](uri1)](uri2)](uri3)`
+  `[foo <bar attr="](baz)">`
   
   **Output:**
  
   ![Image](519diff.JPG)
   
-  In this case, I think that the given implementation is correct. This can be confirmed by the commonmark demo screenshot below. Common mark agrees that this imagine link should not result as a link that the programs returns so the output should be an empty list as shown by my implementation. 
+  In this case, I think that my implementation shows the correct output but does not cover the issue. The correct output can be confirmed by the commonmark demo screenshot below. Common mark shows that this input should not be considered a link due to the `<` inside the brackets. Even though my implementation shows the right output, my code does not consider this case.
   
-  The given implementation instead considers an imbedded link. To fix this, there needs to be a check on whether there is  
+  ![Image](correctput.JPG)
+  
+  The given implementation does not consider if there is a less than carrot. To fix this, there needs to be a check on whether there is a less than carrot and if that index is in between the open and closed brackets. If it is, similar to with image links, it should continue without adding that link. Below is the screenshot of the code changes to consider the case on my implementation. Creating a similar check will fix the issue on the given implementation.
    
+   ![Image](fix3.JPG)
+
 ***
 
 
